@@ -78,7 +78,7 @@ Description: (Optional) Name of the module.
 
 Type: `string`
 
-Default: `"repositoriesfactory"`
+Default: `"workspacesfactory"`
 
 ### <a name="input_module_provider"></a> [module\_provider](#input\_module\_provider)
 
@@ -86,7 +86,7 @@ Description: (Optional) Name of the module provider.
 
 Type: `string`
 
-Default: `"github"`
+Default: `"tfe"`
 
 ### <a name="input_project_name"></a> [project\_name](#input\_project\_name)
 
