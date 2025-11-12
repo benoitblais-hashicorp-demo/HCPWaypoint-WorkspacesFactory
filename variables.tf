@@ -7,14 +7,14 @@ variable "organization" {
 variable "module_name" {
   description = "(Optional) Name of the module."
   type        = string
-  default     = "repositoriesfactory"
+  default     = "workspacesfactory"
   nullable    = false
 }
 
 variable "module_provider" {
   description = "(Optional) Name of the module provider."
   type        = string
-  default     = "github"
+  default     = "tfe"
   nullable    = false
 }
 
