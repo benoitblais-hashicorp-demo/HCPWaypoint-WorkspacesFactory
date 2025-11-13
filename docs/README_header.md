@@ -40,3 +40,4 @@ There are several ways to provide the required informations:
 ## Features
 
 * HCP Waypoint Template
+* HCP Waypoint Add-on

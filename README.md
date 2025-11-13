@@ -41,6 +41,7 @@ There are several ways to provide the required informations:
 ## Features
 
 * HCP Waypoint Template
+* HCP Waypoint Add-on
 
 ## Documentation
 
@@ -72,6 +73,37 @@ Type: `string`
 
 The following input variables are optional (have default values):
 
+### <a name="input_add_on_description"></a> [add\_on\_description](#input\_add\_on\_description)
+
+Description: (Optional) A description of the Waypoint add-on, along with when and why it should be used, up to 500 characters.
+
+Type: `string`
+
+Default: `"This HCP Waypoint add-on provisions a HCP Terraform workspace. You must provide an application name (unique, up to 500 characters, letters/numbers/dashes/underscores, ends with -workspace), workspace name, description, and topics (comma-separated without spaces)."`
+
+### <a name="input_add_on_summary"></a> [add\_on\_summary](#input\_add\_on\_summary)
+
+Description: (Optional) A brief description of the Waypoint add-on, up to 64 characters.
+
+Type: `string`
+
+Default: `"This add-on provisions a HCP Terraform workspace."`
+
+### <a name="input_labels"></a> [labels](#input\_labels)
+
+Description: (Optional) Labels to assign to the Waypoint template and add-on.
+
+Type: `list(string)`
+
+Default:
+
+```json
+[
+  "hcp terraform",
+  "workspace"
+]
+```
+
 ### <a name="input_module_name"></a> [module\_name](#input\_module\_name)
 
 Description: (Optional) Name of the module.
@@ -88,9 +120,17 @@ Type: `string`
 
 Default: `"tfe"`
 
+### <a name="input_name"></a> [name](#input\_name)
+
+Description: (Optional) Name of the Waypoint template and add-on.
+
+Type: `string`
+
+Default: `"HCPTerraformWorkspace"`
+
 ### <a name="input_project_name"></a> [project\_name](#input\_project\_name)
 
-Description: (Required) Name of the Terraform Cloud/Enterprise project where the workspace created by the no-code is located.
+Description: (Optional) Name of the Terraform Cloud/Enterprise project where the workspace created by the no-code is located.
 
 Type: `string`
 
@@ -104,29 +144,6 @@ Type: `string`
 
 Default: `"This HCP Waypoint template provisions a HCP Terraform workspace. You must provide an application name (unique, up to 500 characters, letters/numbers/dashes/underscores, ends with -workspace), workspace name, description, and topics (comma-separated without spaces)."`
 
-### <a name="input_template_labels"></a> [template\_labels](#input\_template\_labels)
-
-Description: (Optional) Labels to assign to the Waypoint template.
-
-Type: `list(string)`
-
-Default:
-
-```json
-[
-  "hcp terraform",
-  "workspace"
-]
-```
-
-### <a name="input_template_name"></a> [template\_name](#input\_template\_name)
-
-Description: (Optional) Name of the Waypoint template.
-
-Type: `string`
-
-Default: `"HCPTerraformWorkspace"`
-
 ### <a name="input_template_summary"></a> [template\_summary](#input\_template\_summary)
 
 Description: (Optional) A brief description of the Waypoint template, up to 64 characters.
@@ -135,9 +152,9 @@ Type: `string`
 
 Default: `"This template is use to provision a HCP Terraform workspace."`
 
-### <a name="input_template_variables"></a> [template\_variables](#input\_template\_variables)
+### <a name="input_variables"></a> [variables](#input\_variables)
 
-Description:   (Optional) The template\_variables is a list of object that supports the following:  
+Description:   (Optional) The variables block is a list of object that supports the following:  
     name          : (Required) The name of the variable.  
     variable\_type : (Required) The type of the variable.  
     options       : (Optional) A list of options for the variable, if applicable.  
@@ -177,6 +194,7 @@ Default:
 
 The following resources are used by this module:
 
+- [hcp_waypoint_add_on_definition.this](https://registry.terraform.io/providers/hashicorp/hcp/0.110.0/docs/resources/waypoint_add_on_definition) (resource)
 - [hcp_waypoint_template.this](https://registry.terraform.io/providers/hashicorp/hcp/0.110.0/docs/resources/waypoint_template) (resource)
 - [tfe_project.this](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/data-sources/project) (data source)
 - [tfe_registry_module.this](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/data-sources/registry_module) (data source)
