@@ -7,7 +7,7 @@ variable "organization" {
 variable "add_on_description" {
   description = "(Optional) A description of the Waypoint add-on, along with when and why it should be used, up to 500 characters."
   type        = string
-  default     = "This HCP Waypoint add-on provisions a HCP Terraform workspace. You must provide an application name (unique, up to 500 characters, letters/numbers/dashes/underscores, ends with -workspace), workspace name, description, and topics (comma-separated without spaces)."
+  default     = "This HCP Waypoint add-on provisions a HCP Terraform workspace. You must provide an application name (unique, up to 50 characters, letters/numbers/dashes/underscores, ends with -workspace), workspace name, description, and topics (comma-separated without spaces)."
 
   validation {
     condition     = var.add_on_description == null ? true : length(var.add_on_description) <= 500
