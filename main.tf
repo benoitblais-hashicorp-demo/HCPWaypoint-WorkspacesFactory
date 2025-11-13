@@ -37,6 +37,7 @@ resource "hcp_waypoint_add_on_definition" "this" {
   variable_options = var.variables
 
   lifecycle {
-    ignore_changes = [readme_markdown_template]
+    ignore_changes = [readme_markdown_template, terraform_project_id, terraform_cloud_workspace_details]
+    # There is a bug in HCP Waypoint where the terraform_project_id is always marked as `Use the same HCP Terraform project that the application is in`.
   }
 }
