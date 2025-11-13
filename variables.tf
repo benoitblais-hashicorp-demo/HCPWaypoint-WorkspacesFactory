@@ -70,7 +70,7 @@ variable "project_name" {
 variable "template_description" {
   description = "(Optional) A description of the Waypoint template, along with when and why it should be used, up to 500 characters."
   type        = string
-  default     = "This HCP Waypoint template provisions a HCP Terraform workspace. You must provide an application name (unique, up to 500 characters, letters/numbers/dashes/underscores, ends with -workspace), workspace name, description, and topics (comma-separated without spaces)."
+  default     = "This HCP Waypoint template provisions a HCP Terraform workspace. You must provide an application name (unique, up to 50 characters, letters/numbers/dashes/underscores, ends with -workspace), workspace name, description, and topics (comma-separated without spaces)."
 
   validation {
     condition     = var.template_description == null ? true : length(var.template_description) <= 500
