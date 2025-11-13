@@ -15,6 +15,12 @@ variable "add_on_description" {
   }
 }
 
+# variable "add_on_readme_path" {
+#   description = "(Optional) Path to the README markdown template file."
+#   type        = string
+#   default     = "./files/ADD_ON_README.tpl"
+# }
+
 variable "add_on_summary" {
   description = "(Optional) A brief description of the Waypoint add-on, up to 64 characters."
   type        = string
@@ -72,6 +78,12 @@ variable "template_description" {
   }
 }
 
+# variable "template_readme_path" {
+#   description = "(Optional) Path to the README markdown template file."
+#   type        = string
+#   default     = "./files/TEMPLATE_README.tpl"
+# }
+
 variable "template_summary" {
   description = "(Optional) A brief description of the Waypoint template, up to 64 characters."
   type        = string
@@ -82,12 +94,6 @@ variable "template_summary" {
     error_message = "The template summary must not exceed 64 characters."
   }
 }
-
-# variable "readme_path" {
-#   description = "(Optional) Path to the README markdown template file."
-#   type        = string
-#   default     = "./files/README.tpl"
-# }
 
 variable "variables" {
   description = <<EOF
