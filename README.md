@@ -79,7 +79,7 @@ Description: (Optional) A description of the Waypoint add-on, along with when an
 
 Type: `string`
 
-Default: `"This HCP Waypoint add-on provisions a HCP Terraform workspace. You must provide an application name (unique, up to 50 characters, letters/numbers/dashes/underscores, ends with -workspace), workspace name, description, and topics (comma-separated without spaces)."`
+Default: `"This HCP Waypoint add-on provisions a HCP Terraform workspace. You must provide an application name (unique, up to 50 characters, letters/numbers/dashes/underscores, ends with -workspace), workspace name, project name, and a vcs repository identifier (comma-separated without spaces)."`
 
 ### <a name="input_add_on_summary"></a> [add\_on\_summary](#input\_add\_on\_summary)
 
@@ -142,7 +142,7 @@ Description: (Optional) A description of the Waypoint template, along with when 
 
 Type: `string`
 
-Default: `"This HCP Waypoint template provisions a HCP Terraform workspace. You must provide an application name (unique, up to 50 characters, letters/numbers/dashes/underscores, ends with -workspace), workspace name, description, and topics (comma-separated without spaces)."`
+Default: `"This HCP Waypoint template provisions a HCP Terraform workspace. You must provide an application name (unique, up to 50 characters, letters/numbers/dashes/underscores, ends with -workspace), workspace name, project name, and a vcs repository identifier (comma-separated without spaces)."`
 
 ### <a name="input_template_summary"></a> [template\_summary](#input\_template\_summary)
 
