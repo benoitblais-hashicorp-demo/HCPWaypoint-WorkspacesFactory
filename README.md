@@ -51,7 +51,7 @@ The following requirements are needed by this module:
 
 - <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) (>= 1.13.0)
 
-- <a name="requirement_hcp"></a> [hcp](#requirement\_hcp) (0.110.0)
+- <a name="requirement_hcp"></a> [hcp](#requirement\_hcp) (0.111.0)
 
 - <a name="requirement_tfe"></a> [tfe](#requirement\_tfe) (~> 0.71)
 
@@ -194,8 +194,8 @@ Default:
 
 The following resources are used by this module:
 
-- [hcp_waypoint_add_on_definition.this](https://registry.terraform.io/providers/hashicorp/hcp/0.110.0/docs/resources/waypoint_add_on_definition) (resource)
-- [hcp_waypoint_template.this](https://registry.terraform.io/providers/hashicorp/hcp/0.110.0/docs/resources/waypoint_template) (resource)
+- [hcp_waypoint_add_on_definition.this](https://registry.terraform.io/providers/hashicorp/hcp/0.111.0/docs/resources/waypoint_add_on_definition) (resource)
+- [hcp_waypoint_template.this](https://registry.terraform.io/providers/hashicorp/hcp/0.111.0/docs/resources/waypoint_template) (resource)
 - [tfe_project.this](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/data-sources/project) (data source)
 - [tfe_registry_module.this](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/data-sources/registry_module) (data source)
 
